@@ -1,0 +1,10 @@
+:host {
+    display: block;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-image: url('./../pictures/fondo.jpg'); /* Ruta a la imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de transparencia */
+    background-blend-mode: overlay; /* Mezcla el color con la imagen de fondo */
+  }

@@ -1,0 +1,128 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido al inicio del eje principal (izquierda) */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh;
+  }
+  
+  /* Contenedor principal del login */
+  .login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin-top: 10px;
+    margin-left: 700px; /* Añade un margen desde la izquierda */
+  }
+  
+  /* Estilo para el logo */
+  .logo {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el título */
+  h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para el texto de bienvenida */
+  p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  /* Grupo de inputs */
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Estilo para las etiquetas de los inputs */
+  label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilo para los campos de texto y contraseña */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  /* Efecto hover y focus en los inputs */
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  }
+  
+  /* Estilo para el botón de inicio de sesión */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto hover para el botón */
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilo para los enlaces de recuperar contraseña y registrarse */
+  .extra-links {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .extra-links a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .extra-links a:hover {
+    color: #388E3C;
+  }
+  
+  /* Mensaje de error */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    margin-top: 10px;
+  }
+  
+  /* Estilo del pie de página */
+  footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+  }
+  

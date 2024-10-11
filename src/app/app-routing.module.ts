@@ -1,10 +1,26 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
-const routes: Routes = [];
+import { TableroComponent } from "./componentes/tablero/tablero.component";
+import { LoginComponent } from "./componentes/login/login.component";
+import { RegistrarUsuarioComponent } from "./componentes/registrar-usuario/registrar-usuario.component";
+import { ConfiguracionComponent } from "./componentes/configuracion/configuracion.component";
+import { EditarClienteComponent } from "./componentes/editar-cliente/editar-cliente.component";
+import { NoEncontradoComponent } from "./componentes/no-encontrado/no-encontrado.component";
+import { RegistrarCitaComponent } from "./componentes/registrar-cita/registrar-cita.component";
+
+const routes: Routes = [
+    {path: '', component: LoginComponent},
+    // {path: 'login', component: LoginComponent},
+    {path: 'registrarse', component: RegistrarUsuarioComponent},
+    {path: 'registrarCita', component: RegistrarCitaComponent},
+    {path: 'configuracion', component: ConfiguracionComponent},
+    {path: 'cliente/editar/id', component: EditarClienteComponent},
+    {path: '**', component: NoEncontradoComponent}
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule{}

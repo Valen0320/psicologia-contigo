@@ -1,0 +1,27 @@
+<div class="cita-container">
+    <h2>Registrar Nueva Cita</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="input-group">
+        <label for="nombre">Nombre del Paciente:</label>
+        <input id="nombre" formControlName="nombre" type="text" placeholder="Ingrese el nombre del paciente" required>
+      </div>
+  
+      <div class="input-group">
+        <label for="fecha">Fecha de la Cita:</label>
+        <input id="fecha" formControlName="fecha" type="date" required>
+      </div>
+  
+      <div class="input-group">
+        <label for="hora">Hora de la Cita:</label>
+        <input id="hora" formControlName="hora" type="time" required>
+      </div>
+  
+      <div class="input-group">
+        <label for="motivo">Motivo de la Cita:</label>
+        <textarea id="motivo" formControlName="motivo" placeholder="Escriba el motivo de la consulta" required></textarea>
+      </div>
+  
+      <button type="submit" [disabled]="!citaForm.valid">Registrar Cita</button>
+    </form>
+  </div>
+  
