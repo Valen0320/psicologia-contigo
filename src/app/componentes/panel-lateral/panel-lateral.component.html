@@ -1,0 +1,45 @@
+<div class="toggle-bar" (click)="togglePanel()">
+    <span *ngIf="isCollapsed">➡️</span>
+    <span *ngIf="!isCollapsed">⬅️</span>
+  </div>
+
+<div class="panel-lateral" [class.collapsed]="isCollapsed">
+    <h3>Panel de Control</h3>
+    <ul>
+      <li>
+        <a (click)="toggleCitasMenu()">Gestión de citas</a>
+        <ul *ngIf="citasMenuOpen">
+          <li><a [routerLink]="['/registrarCita']">Asignar cita</a></li>
+          <!-- <li><a (click)="abrirAsignarCita()">Asignar cita</a></li> -->
+          <li><a>Cancelar cita</a></li>
+          <li><a>Modificar cita</a></li>
+          <li><a>Disponibilidad del profesional</a></li>
+        </ul>
+      </li>
+      <li>
+        <a (click)="toggleUsuariosMenu()">Gestión de usuarios</a>
+        <ul *ngIf="usuariosMenuOpen">
+            <li><a>Modificar información de usuario/paciente</a></li>
+            <li><a>Inhabilitar usuario/paciente</a></li>
+        </ul>
+      </li>
+      <li>
+        <a (click)="toggleReportesMenu()">Gestión de reportes</a>
+        <ul *ngIf="reportesMenuOpen">
+            <li><a>Generar reporte de los pacientes registrados</a></li>
+            <li><a>Generar reporte de los tratamientos realizados</a></li>
+            <li><a>Generar reporte de las terapias realizadas</a></li>
+            <li><a>Generar reporte de las citas asignadas, canceladas y realizadas</a></li>
+        </ul>
+    </li>
+      <li>
+        <a (click)="togglePruebasMenu()">Gestión de pruebas</a>
+        <ul *ngIf="pruebasMenuOpen">
+            <li><a>Realizar prueba de personalidad</a></li>
+            <li><a>Realizar prueba psicológica</a></li>
+        </ul>
+    </li>
+      <li><a>Historial médico</a></li>
+    </ul>
+  </div>
+  

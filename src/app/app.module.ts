@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { CabeceroComponent } from './componentes/cabecero/cabecero.component';
@@ -14,8 +15,7 @@ import { PiePaginaComponent } from './componentes/pie-pagina/pie-pagina.componen
 import { AppRoutingModule } from './app-routing.module';
 import { RegistrarCitaComponent } from './componentes/registrar-cita/registrar-cita.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { PanelLateralComponent } from './componentes/panel-lateral/panel-lateral.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +29,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegistrarUsuarioComponent,
     ConfiguracionComponent,
     NoEncontradoComponent,
-    PiePaginaComponent
+    PiePaginaComponent,
+    PanelLateralComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

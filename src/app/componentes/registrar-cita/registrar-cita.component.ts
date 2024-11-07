@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-registrar-cita',
@@ -9,7 +10,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegistrarCitaComponent {
   citaForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,  // Asegúrate de que FormBuilder esté correctamente inyectado
+    // @Inject(MAT_DIALOG_DATA) private data: any  // Inyectar los datos del diálogo si es necesario
+  ) {
     this.citaForm = this.formBuilder.group({
       nombre: ['', Validators.required],
       fecha: ['', Validators.required],
@@ -22,7 +26,6 @@ export class RegistrarCitaComponent {
     if (this.citaForm.valid) {
       const citaData = this.citaForm.value;
       console.log('Cita registrada:', citaData);
-      // Aquí puedes agregar la lógica para enviar los datos al backend
     } else {
       console.log('Formulario inválido');
     }

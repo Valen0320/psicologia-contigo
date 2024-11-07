@@ -1,0 +1,99 @@
+.panel-lateral {
+  width: 200px;
+  height: 100vh;
+  background-color: #4CAF50; /* Verde principal */
+  color: #ffffff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Activar scroll vertical */
+  scrollbar-width: thin; /* Opcional: Estilo más fino del scroll en navegadores compatibles */
+  transition: transform 0.3s ease;
+}
+
+.panel-lateral.collapsed {
+  transform: translateX(-100%); /* Oculta el panel hacia la izquierda */
+}
+
+.toggle-bar {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 20px;
+  height: 50px;
+  background-color: #388E3C; /* Color de la barra de despliegue */
+  color: #ffffff;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.panel-lateral::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar */
+}
+
+.panel-lateral::-webkit-scrollbar-thumb {
+  background-color: #388E3C; /* Color del scrollbar */
+  border-radius: 4px;
+}
+
+.panel-lateral::-webkit-scrollbar-track {
+  background-color: #e0e0e0; /* Color del fondo del track del scrollbar */
+}
+
+.panel-lateral h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.panel-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.panel-lateral ul li {
+  margin: 10px 0;
+}
+
+.panel-lateral ul li a {
+  color: #e8f5e9; /* Verde claro */
+  text-decoration: none;
+  font-size: 1.1em;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.panel-lateral ul li a:hover {
+  background-color: #388E3C; /* Verde oscuro */
+  color: #ffffff;
+}
+
+.panel-lateral ul li ul {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 2px solid #81C784; /* Verde suave para el borde izquierdo */
+}
+
+.panel-lateral ul li ul li a {
+  color: #C8E6C9; /* Verde muy claro */
+  font-size: 0.95em;
+  padding: 8px;
+}
+
+.panel-lateral ul li ul li a:hover {
+  background-color: #388E3C; /* Verde oscuro */
+  color: #ffffff;
+}
+
+/* panel-lateral.component.css */

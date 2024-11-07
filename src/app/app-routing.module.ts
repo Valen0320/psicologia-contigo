@@ -8,9 +8,11 @@ import { ConfiguracionComponent } from "./componentes/configuracion/configuracio
 import { EditarClienteComponent } from "./componentes/editar-cliente/editar-cliente.component";
 import { NoEncontradoComponent } from "./componentes/no-encontrado/no-encontrado.component";
 import { RegistrarCitaComponent } from "./componentes/registrar-cita/registrar-cita.component";
+import { PanelLateralComponent } from "./componentes/panel-lateral/panel-lateral.component";
 
 const routes: Routes = [
     {path: '', component: LoginComponent},
+    {path: 'home', component: PanelLateralComponent},
     // {path: 'login', component: LoginComponent},
     {path: 'registrarse', component: RegistrarUsuarioComponent},
     {path: 'registrarCita', component: RegistrarCitaComponent},
